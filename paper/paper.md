@@ -37,13 +37,7 @@ affiliations:
 date: 7 Dec 2025
 bibliography: paper.bib
 
-# Optional fields for papers that are part of a joint submission.
-# For example, submitting to a AAS journal too, see this blog post:
-# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
-#
-# If you are not making a joint submission you should remove these lines.
-#
-aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
+aas-doi: 10.3847/1538-4357/aea0d4
 aas-journal: Astrophysical Journal
 ---
 
