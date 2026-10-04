@@ -50,7 +50,7 @@ uv pip install -e .
 
 ### Requirements
 
-- Python >= 3.11
+- Python >= 3.12
 - JAX >= 0.5.3
 - For GPU support, install JAX with CUDA support separately
 - See `pyproject.toml` for full dependency list
@@ -77,6 +77,33 @@ If you use potamides in your research, please cite the
 Citation metadata is also available in
 [`CITATION.cff`](https://github.com/xggs-dev/potamides/blob/main/CITATION.cff)
 (GitHub's "Cite this repository" button).
+
+## Contributing
+
+potamides is made for its users, so contributions of all kinds are welcome and
+encouraged. You do not need to write code to help: reporting a bug, suggesting a
+feature, improving the documentation, or sharing a scientific use case are all
+valuable.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for a full guide, including how to set up
+a development environment and run the tests. The easiest ways to get involved
+are through GitHub:
+
+- **Found a bug or have a feature request?** Open an
+  [issue](https://github.com/xggs-dev/potamides/issues). Please include enough
+  detail (a minimal example, error messages, and your environment) for us to
+  reproduce the problem.
+- **Have a question or an idea to discuss?** Start a thread in
+  [Discussions](https://github.com/xggs-dev/potamides/discussions).
+- **Want to contribute code or documentation?** Fork the repository, create a
+  branch for your change, and open a
+  [pull request](https://github.com/xggs-dev/potamides/pulls). If you are new to
+  this workflow, GitHub's
+  [guide to contributing to projects](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
+  is a good place to start, and we are happy to help you through the process.
+
+By contributing, you agree to abide by our
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 

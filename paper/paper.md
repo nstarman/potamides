@@ -36,23 +36,26 @@ affiliations:
     ror: 00hx57361
 date: 7 Dec 2025
 bibliography: paper.bib
+
+aas-doi: 10.3847/1538-4357/aea0d4
+aas-journal: Astrophysical Journal
 ---
 
 # Summary
 
-`Potamides` is a Python package for inferring the mass distribution of galaxies
+`Potamides` is a Python package for inferring the mass distributions of galaxies
 from the projected shapes of stellar streams in imaging data. Stellar streams
 are elongated structures produced when star clusters or dwarf galaxies are
 tidally disrupted by their host. Because their projected tracks carry
 information about the host's gravitational field, the local curvature of a
-stream can constrain the underlying potential.
+stream can constrain the underlying gravitational potential.
 
 The package implements and extends the curvature-based likelihood framework of
-[@Nibauer:2023]. Rather than generating a full dynamical realization of a
-stellar stream for each trial model, `Potamides` represents observed stream
-tracks with JAX-based splines. It evaluates gravitational accelerations in
-candidate potentials and compares them directly to the local stream geometry.
-This provides a lower-cost inference workflow that complements traditional
+@Nibauer:2023. Rather than generating a full dynamical realization of a stellar
+stream for each trial model, `Potamides` represents observed stream tracks with
+JAX-based splines [@jax]. It evaluates gravitational accelerations in candidate
+potentials and compares them directly to the local stream geometry. This
+provides a lower-cost inference workflow that complements traditional
 forward-modeling approaches. `Potamides` supports the complete analysis pipeline
 for a galaxy, from annotating stream ridge-lines to evaluating likelihoods
 across many potential models.
@@ -62,10 +65,10 @@ across many potential models.
 Stellar streams are popular tracers of galactic gravitational potentials and the
 dark matter halos that dominate galaxies [@Bonaca:2014]. For external galaxies,
 the observed dynamical information is often limited to projected stream
-morphology. The curvature-based method of Nibauer et al. [@Nibauer:2023]
-addresses this regime by using the local relationship between stream curvature
-and gravitational acceleration to directly constrain the potential's geometry
-from the projected stream track.
+morphology. The curvature-based method of @Nibauer:2023 addresses this regime by
+using the local relationship between stream curvature and gravitational
+acceleration to directly constrain the potential's geometry from the projected
+stream track.
 
 Until now, this method lacked a reusable, high-performance software
 implementation intended for community use. `Potamides` fills that gap, serving
@@ -126,27 +129,28 @@ entire galaxy.
 
 Performance is highly optimized. Starting from an annotated stream, `Potamides`
 infers a ridge-line spline via gradient-based optimization in 10–30 seconds on a
-2023 M2 MacBook Pro. Posterior refinement with NUTS [@Hoffman:2014] typically
-requires another 20 seconds. The potential-inference stage evaluates the
-curvature likelihood on a dense grid of $10^6$ parameter points—marginalizing
-over roughly 50 spline realizations—in about 15 seconds per stream segment. For
-a galaxy with three segments, an end-to-end analysis runs in under 15 minutes on
-standard laptop hardware. On a single GPU, the combined spline-posterior and
-potential-evaluation stages execute in roughly one minute. This speed supports
-the rapid evaluation of many potential families, making it easier to test model
-dependencies without committing early to a single dynamical description.
+2023 M2 MacBook Pro. Posterior refinement with NUTS [@Hoffman+Gelman:2011]
+typically requires another 20 seconds. The potential-inference stage evaluates
+the curvature likelihood on a dense grid of $10^6$ parameter
+points—marginalizing over roughly 50 spline realizations—in about 15 seconds per
+stream segment. For a galaxy with three segments, an end-to-end analysis runs in
+under 15 minutes on standard laptop hardware. On a single GPU, the combined
+spline-posterior and potential-evaluation stages execute in roughly one minute.
+This speed supports the rapid evaluation of many potential families, making it
+easier to test model dependencies without committing early to a single dynamical
+description.
 
 # Research impact statement
 
 `Potamides` is actively used in current research workflows. Specifically, it is
 being used in a Euclid Key Paper analysis of stellar streams in the Q1 data
-release and in a separate study of streams in the Stream Legacy Survey. Both
-projects rely on the package as the primary implementation for curvature-based
-inference.
+release [@Starkman:2026:EuclidQ1] and in a separate study of streams in the
+Stream Legacy Survey [@Wu:2026:Potamides]. Both projects rely on the package as
+the primary implementation for curvature-based inference.
 
 The software demonstrates immediate scientific value by providing tested,
 high-performance, reproducible capabilities. Notably, `Potamides` successfully
-reproduces the foundational research results of [@Nibauer:2023]. By streamlining
+reproduces the foundational research results of @Nibauer:2023. By streamlining
 the process from annotating stream segments to calculating potential likelihoods
 on standard hardware, `Potamides` serves as a highly practical tool for
 researchers exploring gravitational potentials through stream morphology.
