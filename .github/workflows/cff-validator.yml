@@ -1,0 +1,31 @@
+name: CITATION.cff
+
+on:
+  pull_request:
+    paths:
+      - CITATION.cff
+      - .github/workflows/cff-validator.yml
+  push:
+    branches:
+      - main
+    paths:
+      - CITATION.cff
+      - .github/workflows/cff-validator.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate CITATION.cff
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Validate CITATION.cff
+        uses: dieghernan/cff-validator@d8f85828214016ce6976e740b6e0504c0fdc4dbb # v5
