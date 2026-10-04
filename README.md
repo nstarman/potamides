@@ -55,6 +55,29 @@ uv pip install -e .
 - For GPU support, install JAX with CUDA support separately
 - See `pyproject.toml` for full dependency list
 
+## Citation
+
+If you use potamides in your research, please cite the
+[JOSS paper](https://doi.org/10.21105/joss.10712):
+
+```bibtex
+@article{potamides,
+  author = {Wu, Sirui and Starkman, Nathaniel and Nibauer, Jacob and Pearson, Sarah},
+  title = {Potamides: JAX tools for curvature-based inference from stellar streams},
+  journal = {Journal of Open Source Software},
+  year = {2026},
+  volume = {11},
+  number = {126},
+  pages = {10712},
+  doi = {10.21105/joss.10712},
+  url = {https://doi.org/10.21105/joss.10712}
+}
+```
+
+Citation metadata is also available in
+[`CITATION.cff`](https://github.com/xggs-dev/potamides/blob/main/CITATION.cff)
+(GitHub's "Cite this repository" button).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file

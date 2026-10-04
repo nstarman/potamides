@@ -372,16 +372,26 @@ This quickstart covered single-parameter fitting. For more advanced analyses:
 
 ## Citation
 
-If you use this software in your research, please cite it as:
+If you use potamides in your research, please cite the
+[JOSS paper](https://doi.org/10.21105/joss.10712):
 
 ```bibtex
-@software{potamides2024,
+@article{potamides,
   author = {Wu, Sirui and Starkman, Nathaniel and Nibauer, Jacob and Pearson, Sarah},
-  title = {Potamides: A Python package for stream curvature analysis},
-  year = {2024},
-  url = {https://github.com/xggs-dev/potamides}
+  title = {Potamides: JAX tools for curvature-based inference from stellar streams},
+  journal = {Journal of Open Source Software},
+  year = {2026},
+  volume = {11},
+  number = {126},
+  pages = {10712},
+  doi = {10.21105/joss.10712},
+  url = {https://doi.org/10.21105/joss.10712}
 }
 ```
+
+Citation metadata is also available in
+[`CITATION.cff`](https://github.com/xggs-dev/potamides/blob/main/CITATION.cff)
+(GitHub's "Cite this repository" button).
 
 ## Ecosystem
 
