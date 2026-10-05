@@ -6,6 +6,7 @@
 [![PyPI version][pypi-version]][pypi-link]
 [![PyPI platforms][pypi-platforms]][pypi-link]
 
+[![JOSS][joss-badge]][joss-link]
 [![GitHub Discussion][github-discussions-badge]][github-discussions-link]
 
 <!-- SPHINX-START -->
@@ -60,6 +61,22 @@ uv pip install -e .
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 for details.
 
+## Citation
+
+If you use this software in your research, please cite our
+[JOSS paper](https://doi.org/10.21105/joss.10712):
+
+```bibtex
+@article{Wu2026,
+  author = {Wu, Sirui and Starkman, Nathaniel and Nibauer, Jacob and Pearson, Sarah},
+  title = {Potamides: JAX tools for curvature-based inference from stellar streams},
+  journal = {Journal of Open Source Software},
+  year = {2026},
+  doi = {10.21105/joss.10712},
+  url = {https://doi.org/10.21105/joss.10712}
+}
+```
+
 ## Acknowledgments
 
 This package builds upon excellent open-source scientific software:
@@ -88,6 +105,8 @@ been and will continue to be reviewed and verified by the human maintainers.
 [actions-link]:             https://github.com/xggs-dev/potamides/actions
 [github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
 [github-discussions-link]:  https://github.com/xggs-dev/potamides/discussions
+[joss-badge]:               https://joss.theoj.org/papers/10.21105/joss.10712/status.svg
+[joss-link]:                https://doi.org/10.21105/joss.10712
 [pypi-link]:                https://pypi.org/project/potamides/
 [pypi-platforms]:           https://img.shields.io/pypi/pyversions/potamides
 [pypi-version]:             https://img.shields.io/pypi/v/potamides
